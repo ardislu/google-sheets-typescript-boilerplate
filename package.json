@@ -10,10 +10,10 @@
   "author": "Ardis Lu <ardis@ardis.lu> (https://ardis.lu)",
   "devDependencies": {
     "@google/clasp": "^2.3.0",
-    "@types/google-apps-script": "^1.0.20",
-    "@typescript-eslint/eslint-plugin": "^4.11.1",
-    "@typescript-eslint/parser": "^4.11.1",
-    "eslint": "^7.17.0",
+    "@types/google-apps-script": "^1.0.22",
+    "@typescript-eslint/eslint-plugin": "^4.14.2",
+    "@typescript-eslint/parser": "^4.14.2",
+    "eslint": "^7.19.0",
     "typescript": "^4.1.3"
   }
 }
