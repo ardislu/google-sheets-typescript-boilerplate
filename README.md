@@ -1,7 +1,12 @@
-# google-sheets-ts-template
+# google-sheets-typescript-boilerplate
 [![clasp](https://img.shields.io/badge/built%20with-clasp-4285f4.svg)](https://github.com/google/clasp)
 
-Template to write custom Google Sheets functions and UI customizations in Typescript.
+Boilerplate for writing custom Google Sheets functions and UI customizations in Typescript. Included:
+- Minimal example to demonstrate UI customization (custom menu dropdowns, custom popup)
+- Minimal examples to demonstrate different types of custom formulas
+- Helper functions to address edge cases specific to spreadsheet formulas
+
+Reference JSDoc comments in `Code.ts` for more information.
 
 ## Requirements
 - [Node.js](https://nodejs.org/)
@@ -9,9 +14,9 @@ Template to write custom Google Sheets functions and UI customizations in Typesc
 - A Google Apps Script project attached to a Google Sheet to pull and push to (see section below)
 
 ## Quickstart
-1. Clone this repo 
+1. Clone this repo
 ```
-git clone https://github.com/ardislu/google-sheets-ts-template.git
+git clone https://github.com/ardislu/google-sheets-typescript-boilerplate.git
 ```
 
 2. Install project dependencies
@@ -37,7 +42,7 @@ You need a `.clasp.json` file in the project root with the property `scriptID` f
 
 1. Create a new Google Sheet at [sheets.google.com](sheets.google.com).
 2. Give the sheet a name to save it.
-3. In the spreadsheet, click `Tools > Script Editor` to create and attach a Google Apps Script project to the sheet. 
+3. In the spreadsheet, click `Tools > Script Editor` to create and attach a Google Apps Script project to the sheet.
 4. Give the Google Apps Script project a name to save it.
 5. In the Google Apps Script project, click `File > Project properties` to find the `Script ID`.
 6. Paste the `Script ID` into `.clasp.json`:
@@ -67,7 +72,7 @@ npm run lint
 When writing functions intended to be used in a Google Sheet (i.e. a custom formula), you:
 
 **MUST**
-- Declare the function with `function MY_FUNCTION() {...}`. Named function expressions like `const MY_FUNCTION = () => {...}` will NOT be accessible in the Sheet. 
+- Declare the function with `function MY_FUNCTION() {...}`. Named function expressions like `const MY_FUNCTION = () => {...}` will NOT be accessible in the Sheet.
 - Use the `@customfunction` tag in the function's JSDoc comment.
 - Not end the function name with an underscore `_`.
 - Make the function deterministic (no `Math.random()` or `Date.now()`).
