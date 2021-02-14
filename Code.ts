@@ -60,14 +60,14 @@ function lift<T>(f: (singleValue: T) => T) {
  *
  * @param {(singleValue: T) => T} sf A function that takes and returns a value of a generic type T.
  * @param {(arrayValue: T[][]) => T[][]} af A function that takes and returns a 2-D array of a generic type T.
- * @param {string} [baseType] Optional parameter to specify the exact type that is taken and returned by `sf`. Use this parameter
- * when `T` is an array to override the default `Array.isArray` logic that `combine` uses to determine when to apply `af` instead of `sf`.
+ * @param {(value: T | T[][]) => boolean} [isArrayValueFn] Optional parameter for custom logic to determine when to use `af`
+ * instead of `sf`. By default, `Array.isArray` is used.
  * @return A function that takes values of either `T` or `T[][]`, and returns a value of the same type.
  */
-function combine<T>(sf: (singleValue: T) => T, af: (arrayValue: T[][]) => T[][], baseType?: string) {
+function combine<T>(sf: (singleValue: T) => T, af: (arrayValue: T[][]) => T[][], isArrayValueFn?: (value: T | T[][]) => boolean) {
   const combinedFunction = (value: T | T[][]) => {
-    if (baseType !== undefined) {
-      return typeof value === baseType ? sf(value as T) : af(value as T[][]);
+    if (isArrayValueFn !== undefined) {
+      return isArrayValueFn(value) ? af(value as T[][]) : sf(value as T);
     }
     else {
       return Array.isArray(value) ? af(value) : sf(value);
