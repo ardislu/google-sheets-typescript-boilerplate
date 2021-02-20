@@ -54,24 +54,19 @@ function lift<T>(f: (singleValue: T) => T) {
 }
 
 /**
- * Combines two functions into one.
+ * Combines two functions into one, with a third function to determine when to use the second function instead of the first.
  *
- * Use this function to create the final function for deployment into Google Sheets.
+ * Use this function to create the final formula for deployment into Google Sheets.
  *
- * @param {(singleValue: T) => T} sf A function that takes and returns a value of a generic type T.
- * @param {(arrayValue: T[][]) => T[][]} af A function that takes and returns a 2-D array of a generic type T.
- * @param {(value: T | T[][]) => boolean} [isArrayValueFn] Optional parameter for custom logic to determine when to use `af`
- * instead of `sf`. By default, `Array.isArray` is used.
- * @return A function that takes values of either `T` or `T[][]`, and returns a value of the same type.
+ * @param {(tValue: T) => T} tFn A function that takes and returns a value of a generic type T.
+ * @param {(uValue: U) => U} uFn A function that takes and returns a value of a generic type U.
+ * @param {(value: T | U) => boolean} [isAltValueFn] Optional parameter for custom logic to determine when to use `uFn`
+ * instead of `tFn`. By default, `Array.isArray` is used.
+ * @return A function that takes values of either `T` or `U`, and returns a value of the same type.
  */
-function combine<T>(sf: (singleValue: T) => T, af: (arrayValue: T[][]) => T[][], isArrayValueFn?: (value: T | T[][]) => boolean) {
-  const combinedFunction = (value: T | T[][]) => {
-    if (isArrayValueFn !== undefined) {
-      return isArrayValueFn(value) ? af(value as T[][]) : sf(value as T);
-    }
-    else {
-      return Array.isArray(value) ? af(value) : sf(value);
-    }
+function combine<T, U>(tFn: (tValue: T) => T, uFn: (uValue: U) => U, isAltValueFn: (value: T | U) => boolean = Array.isArray) {
+  const combinedFunction = (value: T | U) => {
+    return isAltValueFn(value) ? uFn(value as U) : tFn(value as T);
   }
   return combinedFunction;
 }
