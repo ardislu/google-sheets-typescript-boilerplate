@@ -1,4 +1,11 @@
 /**
+ * @OnlyCurrentDoc
+ *
+ * Set the script's authorization scope to the smallest scope needed.
+ * Reference: https://developers.google.com/apps-script/guides/services/authorization
+ */
+
+/**
  * The event handler triggered when opening the spreadsheet.
  * @param {Event} e The onOpen event.
  */
