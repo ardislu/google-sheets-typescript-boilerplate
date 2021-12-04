@@ -1,6 +1,6 @@
 {
   "name": "google-sheets-ts-template",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Template to write custom Google Sheets functions and UI customizations in Typescript.",
   "scripts": {
     "clasp": "clasp",
