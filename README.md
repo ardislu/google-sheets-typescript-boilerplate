@@ -42,9 +42,9 @@ You need a `.clasp.json` file in the project root with the property `scriptID` f
 
 1. Create a new Google Sheet at [sheets.google.com](sheets.google.com).
 2. Give the sheet a name to save it.
-3. In the spreadsheet, click `Tools > Script Editor` to create and attach a Google Apps Script project to the sheet.
+3. In the spreadsheet, click `Extensions > Apps Script` to create and attach a Google Apps Script project to the sheet.
 4. Give the Google Apps Script project a name to save it.
-5. In the Google Apps Script project, click `File > Project properties` to find the `Script ID`.
+5. In the Google Apps Script project, click `Project Settings` to find the `Script ID`.
 6. Paste the `Script ID` into `.clasp.json`:
 ``` json
 {
