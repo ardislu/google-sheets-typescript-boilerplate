@@ -57,7 +57,7 @@ Follow the same steps above to attach this project to an existing Google Sheet o
 
 Reference the [clasp documentation](https://developers.google.com/apps-script/guides/clasp) for more details.
 
-## NPM Scripts
+## npm scripts
 Push to the Google Apps Script project
 ```
 npm run clasp:push
@@ -68,7 +68,7 @@ Run `eslint`
 npm run lint
 ```
 
-## Custom Google Sheets Formulas
+## Custom Google Sheets formulas
 When writing functions intended to be used in a Google Sheet (i.e. a custom formula), you:
 
 **MUST**
