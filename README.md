@@ -40,7 +40,7 @@ clasp login
 ## Create a Google Apps Script project attached to a Google Sheet
 You need a `.clasp.json` file in the project root with the property `scriptID` for `clasp pull` and `clasp push` to work. Use `.clasp.json.example` as an example.
 
-1. Create a new Google Sheet at [sheets.google.com](sheets.google.com).
+1. [Create a new Google Sheet](https://sheets.new).
 2. Give the sheet a name to save it.
 3. In the spreadsheet, click `Extensions > Apps Script` to create and attach a Google Apps Script project to the sheet.
 4. Give the Google Apps Script project a name to save it.
