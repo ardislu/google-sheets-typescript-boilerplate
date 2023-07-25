@@ -9,12 +9,12 @@
   },
   "author": "Ardis Lu <ardis@ardis.lu> (https://ardis.lu)",
   "devDependencies": {
-    "@google/clasp": "^2.4.1",
-    "@types/google-apps-script": "^1.0.53",
-    "@typescript-eslint/eslint-plugin": "^5.30.7",
-    "@typescript-eslint/parser": "^5.30.7",
-    "eslint": "^8.20.0",
-    "typescript": "^4.7.4"
+    "@google/clasp": "^2.4.2",
+    "@types/google-apps-script": "^1.0.65",
+    "@typescript-eslint/eslint-plugin": "^6.2.0",
+    "@typescript-eslint/parser": "^6.2.0",
+    "eslint": "^8.45.0",
+    "typescript": "^5.1.6"
   },
   "license": "ISC",
   "repository": {
