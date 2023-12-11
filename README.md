@@ -24,18 +24,13 @@ git clone https://github.com/ardislu/google-sheets-typescript-boilerplate.git
 npm i
 ```
 
-3. Install `clasp` globally (see [clasp documentation](https://developers.google.com/apps-script/guides/clasp))
+3. Authorize yourself in `clasp` (see [`clasp` documentation](https://developers.google.com/apps-script/guides/clasp) for more information)
 ```
-npm i -g @google/clasp
-```
-
-4. Authorize yourself
-```
-clasp login
+npm run clasp login
 ```
 
-5. Write custom functions and UI customizations for Google Sheets in `Code.ts` (in Typescript!)
-6. Use `clasp pull` and `clasp push` to sync with the remote Google Apps Scripts project (see below)
+4. Write custom functions and UI customizations for Google Sheets in `Code.ts` (in Typescript!)
+5. Use `npm run clasp pull` and `npm run clasp push` to sync with the remote Google Apps Scripts project (see below)
 
 ## Create a Google Apps Script project attached to a Google Sheet
 You need a `.clasp.json` file in the project root with the property `scriptID` for `clasp pull` and `clasp push` to work. Use `.clasp.json.example` as an example.
@@ -58,9 +53,9 @@ Follow the same steps above to attach this project to an existing Google Sheet o
 Reference the [clasp documentation](https://developers.google.com/apps-script/guides/clasp) for more details.
 
 ## npm scripts
-Push to the Google Apps Script project
+Access the `clasp` CLI
 ```
-npm run clasp:push
+npm run clasp
 ```
 
 Run `eslint`

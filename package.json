@@ -4,7 +4,6 @@
   "description": "Template to write custom Google Sheets functions and UI customizations in Typescript.",
   "scripts": {
     "clasp": "clasp",
-    "clasp:push": "clasp push",
     "lint": "eslint ."
   },
   "author": "Ardis Lu <ardis@ardis.lu> (https://ardis.lu)",
