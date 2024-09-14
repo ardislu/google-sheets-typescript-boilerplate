@@ -7,9 +7,9 @@
 
 /**
  * The event handler triggered when opening the spreadsheet.
- * @param {Event} e The onOpen event.
+ * @param {GoogleAppsScript.Events.SheetsOnOpen} e The SheetsOnOpen event dispatched when the Sheet is opened.
  */
-function onOpen(e: Event): void {
+function onOpen(e: GoogleAppsScript.Events.SheetsOnOpen): void {
   const ui = SpreadsheetApp.getUi();
 
   ui.createMenu('Example Dropdown')
