@@ -9,11 +9,11 @@
   "author": "Ardis Lu <ardis@ardis.lu> (https://ardis.lu)",
   "devDependencies": {
     "@google/clasp": "^2.4.2",
-    "@types/google-apps-script": "^1.0.78",
-    "@typescript-eslint/eslint-plugin": "^6.13.2",
-    "@typescript-eslint/parser": "^6.13.2",
-    "eslint": "^8.55.0",
-    "typescript": "^5.3.3"
+    "@types/google-apps-script": "^1.0.83",
+    "@typescript-eslint/eslint-plugin": "^8.5.0",
+    "@typescript-eslint/parser": "^8.5.0",
+    "eslint": "^8.57.0",
+    "typescript": "^5.6.2"
   },
   "license": "ISC",
   "repository": {
