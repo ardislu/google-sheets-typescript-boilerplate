@@ -9,28 +9,34 @@ Boilerplate for writing custom Google Sheets functions and UI customizations in 
 Reference JSDoc comments in `Code.ts` for more information.
 
 ## Requirements
+
 - [Node.js](https://nodejs.org/)
 - [git](https://git-scm.com/)
 - A Google Apps Script project attached to a Google Sheet to pull and push to (see [section below](#create-a-google-apps-script-project-attached-to-a-google-sheet))
 
 ## Quickstart
-1. Clone this repo
+
+1. Clone this repo:
+
 ```
 git clone https://github.com/ardislu/google-sheets-typescript-boilerplate.git
 ```
 
-2. Install project dependencies
+2. Install project dependencies:
+
 ```
 npm i
 ```
 
-3. Authorize yourself in `clasp` (see [`clasp` documentation](https://developers.google.com/apps-script/guides/clasp) for more information)
+3. Authorize yourself in `clasp` (see [`clasp` documentation](https://developers.google.com/apps-script/guides/clasp) for more information):
+
 ```
 npm run clasp login
 ```
 
-4. Write custom functions and UI customizations for Google Sheets in `Code.ts` (in Typescript!)
-5. Use `npm run clasp pull` and `npm run clasp push` to sync with the remote Google Apps Scripts project (see [below](#create-a-google-apps-script-project-attached-to-a-google-sheet))
+4. Write custom functions and UI customizations for Google Sheets in `Code.ts` (in Typescript!).
+
+5. Use `npm run clasp pull` and `npm run clasp push` to sync with the remote Google Apps Scripts project (see [below](#create-a-google-apps-script-project-attached-to-a-google-sheet)).
 
 ## Create a Google Apps Script project attached to a Google Sheet
 You need a `.clasp.json` file in the project root with the property `scriptID` for `clasp pull` and `clasp push` to work. Use `.clasp.json.example` as an example.
@@ -41,6 +47,7 @@ You need a `.clasp.json` file in the project root with the property `scriptID` f
 4. Give the Google Apps Script project a name to save it.
 5. In the Google Apps Script project, click `Project Settings` to find the `Script ID`.
 6. Paste the `Script ID` into `.clasp.json`:
+
 ``` json
 {
   "scriptId": "..."
@@ -55,12 +62,14 @@ Follow the same steps above to attach this project to an existing Google Sheet o
 Reference the [clasp documentation](https://developers.google.com/apps-script/guides/clasp) for more details.
 
 ## npm scripts
-Access the `clasp` CLI
+Access the `clasp` CLI:
+
 ```
 npm run clasp
 ```
 
-Run `eslint`
+Run `eslint`:
+
 ```
 npm run lint
 ```
@@ -78,3 +87,5 @@ When writing functions intended to be used in a Google Sheet (i.e. a custom form
 **SHOULD**
 - Use the `ALL_CAPS_WITH_UNDERSCORES` naming convention.
 - Design the function to accept and return 2D arrays `Array<Array<...>>` (i.e. make it an array formula) to minimize roundtrip calls to the Google Apps Script server.
+
+See also: [Guidelines for custom functions](https://developers.google.com/apps-script/guides/sheets/functions#guidelines_for_custom_functions).
