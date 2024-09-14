@@ -11,7 +11,7 @@ Reference JSDoc comments in `Code.ts` for more information.
 ## Requirements
 - [Node.js](https://nodejs.org/)
 - [git](https://git-scm.com/)
-- A Google Apps Script project attached to a Google Sheet to pull and push to (see section below)
+- A Google Apps Script project attached to a Google Sheet to pull and push to (see [section below](#create-a-google-apps-script-project-attached-to-a-google-sheet))
 
 ## Quickstart
 1. Clone this repo
@@ -30,7 +30,7 @@ npm run clasp login
 ```
 
 4. Write custom functions and UI customizations for Google Sheets in `Code.ts` (in Typescript!)
-5. Use `npm run clasp pull` and `npm run clasp push` to sync with the remote Google Apps Scripts project (see below)
+5. Use `npm run clasp pull` and `npm run clasp push` to sync with the remote Google Apps Scripts project (see [below](#create-a-google-apps-script-project-attached-to-a-google-sheet))
 
 ## Create a Google Apps Script project attached to a Google Sheet
 You need a `.clasp.json` file in the project root with the property `scriptID` for `clasp pull` and `clasp push` to work. Use `.clasp.json.example` as an example.
@@ -48,7 +48,9 @@ You need a `.clasp.json` file in the project root with the property `scriptID` f
 ```
 
 Follow the same steps above to attach this project to an existing Google Sheet or Google Apps Script project. You can view existing Google Apps Script projects at [script.google.com](script.google.com).
-- Note that if you use `clasp push` on an existing Google Apps Script project, you will **overwrite any existing code in the project**.
+
+> [!WARNING]<br>
+> If you use `clasp push` on an existing Google Apps Script project, you will **overwrite all existing code in the project**.
 
 Reference the [clasp documentation](https://developers.google.com/apps-script/guides/clasp) for more details.
 
