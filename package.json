@@ -2,6 +2,12 @@
   "name": "google-sheets-ts-template",
   "version": "0.1.0",
   "description": "Template to write custom Google Sheets functions and UI customizations in Typescript.",
+  "author": "Ardis Lu <ardis@ardis.lu> (https://ardis.lu)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ardislu/google-sheets-ts-template.git"
+  },
+  "license": "ISC",
   "type": "module",
   "engines": {
     "node": ">=20.11"
@@ -10,7 +16,6 @@
     "clasp": "clasp",
     "lint": "eslint ."
   },
-  "author": "Ardis Lu <ardis@ardis.lu> (https://ardis.lu)",
   "devDependencies": {
     "@eslint/js": "^9.36.0",
     "@google/clasp": "^2.5.0",
@@ -18,10 +23,5 @@
     "eslint": "^9.36.0",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.45.0"
-  },
-  "license": "ISC",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ardislu/google-sheets-ts-template.git"
   }
 }
