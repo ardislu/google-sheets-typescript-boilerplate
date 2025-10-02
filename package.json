@@ -1,11 +1,11 @@
 {
-  "name": "google-sheets-ts-template",
+  "name": "google-sheets-typescript-boilerplate",
   "version": "0.1.0",
-  "description": "Template to write custom Google Sheets functions and UI customizations in Typescript.",
+  "description": "Boilerplate to write custom Google Sheets functions and UI customizations in Typescript.",
   "author": "Ardis Lu <ardis@ardis.lu> (https://ardis.lu)",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ardislu/google-sheets-ts-template.git"
+    "url": "https://github.com/ardislu/google-sheets-typescript-boilerplate.git"
   },
   "license": "ISC",
   "type": "module",
